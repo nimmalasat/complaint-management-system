@@ -11,4 +11,3 @@ public class ComplaintApiApplication {
         System.out.println("Swagger UI: http://localhost:8080/swagger-ui/index.html");
     }
 }
-npm run dev
