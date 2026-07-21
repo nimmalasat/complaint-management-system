@@ -1,0 +1,116 @@
+================================================================================
+        🚀 COMPLAINT MANAGEMENT SYSTEM - QUICK START GUIDE
+================================================================================
+
+📥 FILES TO DOWNLOAD:
+  1. complaint-management-springboot.zip  (Backend - Spring Boot)
+  2. complaint-management-dashboard.zip   (Frontend - React)
+
+================================================================================
+📁 FOLDER STRUCTURE
+================================================================================
+
+C:\complaint-management-system\
+├── backend\                    (Extract spring-boot zip here)
+└── frontend\                   (Extract dashboard zip here)
+
+================================================================================
+🔧 QUICK START COMMANDS
+================================================================================
+
+BACKEND (Spring Boot):
+  1. Extract: complaint-management-springboot.zip → backend/
+  2. Open: backend/complaint-api/ in IntelliJ IDEA
+  3. Update password in: application.properties
+  4. Run: ComplaintApiApplication.java
+  ✅ Backend at: http://localhost:8080
+
+FRONTEND (React):
+  1. Extract: complaint-management-dashboard.zip → frontend/
+  2. Open Command Prompt in frontend/ folder
+  3. Run: npm install
+  4. Run: npm run dev
+  ✅ Frontend at: http://localhost:3000
+
+================================================================================
+🧪 TEST THE APPLICATION
+================================================================================
+
+1. Open: http://localhost:3000
+2. Register: Click "Sign up"
+   - Name: John Doe
+   - Email: john@example.com
+   - Password: password123
+3. Submit Complaint: Click "Submit New Complaint"
+4. Check API: http://localhost:8080/swagger-ui.html
+
+================================================================================
+📊 IMPORTANT FILES
+================================================================================
+
+Backend Configuration:
+  Location: backend/complaint-api/src/main/resources/application.properties
+  Update: spring.datasource.password=YOUR_MYSQL_PASSWORD
+
+Frontend Configuration:
+  Location: frontend/vite.config.ts
+  Default Port: 3000 (change if needed)
+
+================================================================================
+🐛 COMMON ISSUES & FIXES
+================================================================================
+
+Issue: "Cannot connect to MySQL"
+  Fix: Update password in application.properties
+
+Issue: "Port 3000 already in use"
+  Fix: Edit frontend/vite.config.ts, change port to 3001
+
+Issue: "npm install fails"
+  Fix: Run "npm cache clean --force" then "npm install"
+
+Issue: "Spring Boot won't start"
+  Fix: Make sure MySQL is running and database exists
+
+================================================================================
+📤 DEPLOYMENT
+================================================================================
+
+Frontend Deployment (Vercel - Recommended):
+  npm i -g vercel
+  cd frontend
+  vercel
+
+Backend Deployment (Heroku):
+  heroku login
+  cd backend/complaint-api
+  heroku create your-app-name
+  git push heroku main
+
+================================================================================
+🎯 NEXT STEPS
+================================================================================
+
+1. ✅ Extract both ZIP files
+2. ✅ Run npm install for frontend
+3. ✅ Start backend on port 8080
+4. ✅ Start frontend on port 3000
+5. ✅ Test login/register
+6. ✅ Push to GitHub
+7. ✅ Update LinkedIn profile
+8. ✅ Deploy to production
+
+================================================================================
+📞 NEED HELP?
+================================================================================
+
+Check:
+  1. Backend README: backend/complaint-api/README.md
+  2. Frontend README: frontend/README.md
+  3. COMPLETE_SETUP_GUIDE.md (detailed guide)
+  4. Browser console (F12) for errors
+  5. Terminal logs for error messages
+
+================================================================================
+Congratulations! You have a complete full-stack application! 🎉
+================================================================================
