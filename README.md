@@ -521,7 +521,7 @@ MIT License - feel free to use for personal/commercial projects
 
 **Naveen Satvik N**
 
-- 🎓 CS Undergrad @ SJCIT (graduating 2027)
+- 🎓 CS Undergrad
 - 💻 Backend & Full-Stack Engineer
 - 🔧 Expertise: Java · Spring Boot · React · TypeScript · REST APIs
 
