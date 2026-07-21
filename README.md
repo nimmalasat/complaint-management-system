@@ -528,7 +528,6 @@ MIT License - feel free to use for personal/commercial projects
 ### Connect with me:
 - **LinkedIn**: [naveensatvik](https://linkedin.com/in/naveensatvik)
 - **GitHub**: [@nimmalasat](https://github.com/nimmalasat)
-- **Email**: naveensatvik@email.com
 
 ---
 
