@@ -12,7 +12,7 @@ A production-style backend REST API built with **Spring Boot**, featuring JWT au
 |---|---|
 | Framework | Spring Boot 3.2 |
 | Security | Spring Security + JWT (JJWT) |
-| Database | MySQL + Spring Data JPA / Hibernate |
+| Database | PostgreSQL (Supabase) + Spring Data JPA / Hibernate |
 | Documentation | Swagger / OpenAPI 3 (SpringDoc) |
 | Build Tool | Maven |
 | Language | Java 17 |
@@ -59,7 +59,7 @@ DELETE /api/admin/complaints/{id}         → Delete a complaint
 
 ### Prerequisites
 - Java 17+
-- MySQL 8.0+
+- PostgreSQL 15+ or a Supabase project
 - Maven 3.8+
 - IntelliJ IDEA (recommended)
 
