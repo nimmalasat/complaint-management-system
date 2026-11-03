@@ -166,7 +166,9 @@ For a Git-connected Netlify site, the repository root `netlify.toml` configures
 `VITE_API_URL` in Netlify site environment variables to the deployed backend
 URL plus `/api`, for example `https://api.example.com/api`.
 The backend must also set `APP_CORS_ALLOWED_ORIGINS` to the exact Netlify site
-origin, for example `https://your-site.netlify.app`.
+origin, for example `https://your-site.netlify.app`. The backend uses
+PostgreSQL/Supabase; set its `SPRING_DATASOURCE_URL`, username, and password
+from the Supabase connection details.
 
 ### Deploy to GitHub Pages
 
