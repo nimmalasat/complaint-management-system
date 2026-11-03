@@ -161,6 +161,13 @@ npm run build
 # Upload the 'dist' folder to Netlify
 ```
 
+For a Git-connected Netlify site, the repository root `netlify.toml` configures
+`frontend` as the base directory and `dist` as the publish directory. Set
+`VITE_API_URL` in Netlify site environment variables to the deployed backend
+URL plus `/api`, for example `https://api.example.com/api`.
+The backend must also set `APP_CORS_ALLOWED_ORIGINS` to the exact Netlify site
+origin, for example `https://your-site.netlify.app`.
+
 ### Deploy to GitHub Pages
 
 ```bash
@@ -173,17 +180,15 @@ npm run deploy
 
 ## 🔄 Environment Variables
 
-Create `.env` file (optional, for custom API URL):
+Create `.env` file (optional, for a custom API URL):
 
 ```env
 VITE_API_URL=http://localhost:8080/api
 ```
 
-Update `src/store/authStore.ts` and `src/store/complaintStore.ts` to use:
-
-```typescript
-const API_URL = import.meta.env.VITE_API_URL || '/api';
-```
+The frontend uses this value for all API requests. If it is not set, requests
+use `/api`, which is proxied to `http://localhost:8080` by Vite during local
+development.
 
 ## 🐛 Troubleshooting
 

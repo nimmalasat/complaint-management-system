@@ -92,6 +92,12 @@ mvn spring-boot:run
 http://localhost:8080/swagger-ui.html
 ```
 
+### Production CORS
+
+Set `APP_CORS_ALLOWED_ORIGINS` on the backend to the exact public frontend
+origin, for example `https://your-site.netlify.app`. Multiple origins may be
+comma-separated. The default is `http://localhost:3000`.
+
 ---
 
 ## 📸 Screenshots

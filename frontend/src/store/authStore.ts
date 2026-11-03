@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { apiUrl } from '../lib/api';
 
 export interface User {
   name: string;
@@ -22,7 +23,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   isAuthenticated: !!localStorage.getItem('token'),
 
   login: async (email: string, password: string) => {
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch(apiUrl('/auth/login'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -46,7 +47,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 
   register: async (name: string, email: string, password: string) => {
-    const response = await fetch('/api/auth/register', {
+    const response = await fetch(apiUrl('/auth/register'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),

@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { useAuthStore } from './authStore';
+import { apiUrl } from '../lib/api';
 
 export interface Complaint {
   id: number;
@@ -31,7 +32,9 @@ export const useComplaintStore = create<ComplaintState>((set) => ({
       const token = useAuthStore.getState().token;
       const user = useAuthStore.getState().user;
 
-      const endpoint = user?.role === 'ADMIN' ? '/api/admin/complaints' : '/api/complaints/my';
+      const endpoint = user?.role === 'ADMIN'
+        ? apiUrl('/admin/complaints')
+        : apiUrl('/complaints/my');
 
       const response = await fetch(endpoint, {
         headers: { Authorization: `Bearer ${token}` },
@@ -51,7 +54,7 @@ export const useComplaintStore = create<ComplaintState>((set) => ({
     try {
       const token = useAuthStore.getState().token;
 
-      const response = await fetch('/api/complaints', {
+      const response = await fetch(apiUrl('/complaints'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +77,7 @@ export const useComplaintStore = create<ComplaintState>((set) => ({
     try {
       const token = useAuthStore.getState().token;
 
-      const response = await fetch(`/api/admin/complaints/${id}/status`, {
+      const response = await fetch(apiUrl(`/admin/complaints/${id}/status`), {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +100,7 @@ export const useComplaintStore = create<ComplaintState>((set) => ({
     try {
       const token = useAuthStore.getState().token;
 
-      const response = await fetch(`/api/admin/complaints/${id}`, {
+      const response = await fetch(apiUrl(`/admin/complaints/${id}`), {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
